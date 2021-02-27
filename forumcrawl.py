@@ -1,12 +1,12 @@
 from bs4 import BeautifulSoup
 import requests
-urla = "https://www.macheforum.com/site/threads/uk-customers.588/"
+urla = "*CHANGE TO THREAD PAGE*"
 landing = requests.get(urla)
 tomatosoup = BeautifulSoup(landing.text, 'lxml')
 page = tomatosoup.find('li', class_='pageNav-page')
 finalpage = page.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.text
 
-url='https://www.macheforum.com/site/threads/uk-customers.588/page-235'# + finalpage
+url='*CHANGE TO THREAD PAGE*' + finalpage
 
 f = requests.get(url)
 soup = BeautifulSoup(f.text, 'lxml')

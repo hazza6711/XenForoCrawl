@@ -6,7 +6,7 @@ tomatosoup = BeautifulSoup(landing.text, 'lxml')
 page = tomatosoup.find('li', class_='pageNav-page')
 finalpage = page.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.text
 
-url='*CHANGE TO THREAD PAGE*' + finalpage
+url = urla + 'page-' + finalpage
 
 f = requests.get(url)
 soup = BeautifulSoup(f.text, 'lxml')

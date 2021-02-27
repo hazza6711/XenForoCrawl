@@ -1,7 +1,7 @@
 # XenForoCrawl
 python script to get the latest post in a single forum thread
 
-*you will need*
+*you will need* \n
 bs4 (pip install bs4)
 requests (pip install requests)
 lxml (pip install lxml)
